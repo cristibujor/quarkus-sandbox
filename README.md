@@ -9,31 +9,59 @@ If you want to learn more about Quarkus, please visit its website: <https://quar
 
 **Java JDK:** Required min version: JDK 17+ installed with JAVA_HOME configured appropriately. Tested with: Open JDK version "21"
 
-**Maven**: Apache Maven 3.9.9
+**Maven**: Tested with Apache Maven 3.9.9
 
-**PostgreSql:** PostgreSql 17+
+**PostgreSql:**: Optional, can be started with docker-compose. Tested with PostgreSql 17+
 
-# Database Configuration
-Create PostgreSql database and configure e.g.:
+**docker**: Tested with Docker version 27.3.1
 
-jdbc:postgresql://localhost:5432/sandbox
+**docker-compose**: Tested with Docker Compose version v2.30.3
 
+# Database Configuration (Local Install)
+Install PostgreSql database server and PgAdmin, then create:
+```shell script
 database: sandbox
-
 user: testuser
-
 pass: testuser
-
 schema: quarkus
+```
+Test connection with (using any db client and the credentials):
+```shell script
+jdbc:postgresql://localhost:5432/sandbox
+```
+# Database Configuration (Alternative Docker-Compose)
+From /quarkus-sandbox/scripts run:
+```shell script
+docker-compose up -d
+```
+Postgres DB connection available on port 5434 so that it does not conflict with an eventual local postgres instance running on the default 5432.
+```shell script
+jdbc:postgresql://localhost:5434/sandbox
+```
+
+PgAdmin access: http://localhost:8034/browser/
+Create new server connection to (notice docker network host 'db' and port '5432' because PgAdmin runs within the docker network):
+```shell script
+host: db
+port: 5432
+user: testuser
+pass: testuser
+```
 
 ## Running the application in dev mode
 
-You can run your application in dev mode that enables live coding using:
+Start the database (either local installation or using ~/.../quarkus-sandbox/scripts/**docker-compose up -d**)
 
+You can run your application in dev mode that enables live coding using: 
 ```shell script
 ./mvnw quarkus:dev
 ```
 
+Test localhost access:
+```shell script
+curl -w "\n" http://localhost:8080/hello
+"Hello from Quarkus REST 'HelloResource':  \__(o-o)__/"
+```
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
 ## Packaging and running the application

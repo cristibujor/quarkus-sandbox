@@ -1,13 +1,49 @@
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
+// Guides and tutorials:
 https://quarkus.io/guides/getting-started#bootstrapping-the-project
 
 //The easiest way to create a new Quarkus project is to open a terminal and run the following command.
 mvn io.quarkus.platform:quarkus-maven-plugin:3.18.1:create -DprojectGroupId=org.sandbox.quarkus -DprojectArtifactId=quarkus-sandbox -Dextensions='rest'
 
+https://quarkus.io/guides/lifecycle
+
+https://quarkus.io/guides/datasource
+
+https://quarkus.io/guides/flyway
+
+https://quarkus.io/guides/datasource#in-memory-databases
+
+https://quarkus.io/guides/hibernate-orm
+
+https://quarkus.io/guides/getting-started-testing
+
+https://quarkus.io/guides/cdi
+https://quarkus.io/guides/cdi
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
--------------------------------------------------------------------------------
+//Hints: WSL Ubuntu / Java / Docker Install:
+https://documentation.ubuntu.com/wsl/en/latest/tutorials/develop-with-ubuntu-wsl/
+
+wsl --list --online
+wsl --install -d Ubuntu-24.04
+https://learn.microsoft.com/en-us/windows/wsl/wsl-config#wslconfig
+localhostforwarding=true or better: networkingMode=mirrored
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install openjdk-21-jdk
+java -version
+
+sudo apt install docker.io
+sudo groupadd docker
+sudo usermod -aG docker $USER
+docker run hello-world
+sudo apt install docker-compose
+docker-compose -v
+docker -v
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------

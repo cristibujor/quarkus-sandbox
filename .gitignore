@@ -4,6 +4,7 @@ pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 release.properties
+.flattened-pom.xml
 
 # Eclipse
 .project
@@ -17,24 +18,28 @@ bin/
 *.iml
 *.iws
 
-# Compiled class file
-*.class
+# NetBeans
+nb-configuration.xml
 
-# Log file
-*.log
+# Visual Studio Code
+.vscode
+.factorypath
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# OSX
+.DS_Store
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Vim
+*.swp
+*.swo
 
-# Misc
-scripts/
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env
+
+# Plugin directory
+/.quarkus/cli/plugins/
+# TLS Certificates
+.certs/

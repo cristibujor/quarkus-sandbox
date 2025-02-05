@@ -9,7 +9,7 @@ import org.jboss.logging.Logger;
 @ApplicationScoped
 public class MainLifecycleBean {
 
-  private static final Logger LOGGER = Logger.getLogger("MainLifecycleBean");
+  private static final Logger LOGGER = Logger.getLogger(MainLifecycleBean.class.getSimpleName());
 
   void onStart(@Observes StartupEvent ev) {
     LOGGER.info("#####: MainLifecycleBean / The application is starting...");

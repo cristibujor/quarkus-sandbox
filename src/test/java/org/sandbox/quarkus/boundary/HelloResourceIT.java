@@ -1,4 +1,4 @@
-package org.sandbox.quarkus;
+package org.sandbox.quarkus.boundary;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 

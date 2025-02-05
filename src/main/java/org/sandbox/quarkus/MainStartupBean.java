@@ -8,12 +8,12 @@ import org.jboss.logging.Logger;
 @ApplicationScoped
 public class MainStartupBean {
 
-  private static final Logger LOGGER = Logger.getLogger("MainStartupBean");
+  private static final Logger LOGGER = Logger.getLogger(MainStartupBean.class.getSimpleName());
 
   private final String name;
 
   public MainStartupBean() {
-    this.name = "MainStartupBean";
+    this.name = MainStartupBean.class.getSimpleName();
     LOGGER.info("#####: MainStartupBean / Constructor...");
   }
 

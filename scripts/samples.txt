@@ -21,6 +21,13 @@ https://quarkus.io/guides/getting-started-testing
 https://quarkus.io/guides/cdi
 https://quarkus.io/guides/cdi
 
+https://en.wikipedia.org/wiki/Entity%E2%80%93control%E2%80%93boundary
+https://www.cs.sjsu.edu/~pearce/modules/patterns/enterprise/ecb/ecb.htm
+
+https://quarkus.io/guides/quarkus-reactive-architecture
+https://quarkus.io/guides/hibernate-reactive-panache
+https://quarkus.io/guides/hibernate-orm
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 //Hints: WSL Ubuntu / Java / Docker Install:

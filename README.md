@@ -7,29 +7,20 @@ If you want to learn more about Quarkus, please visit its website: <https://quar
 
 # Prerequisites
 
-**Java JDK:** Required min version: JDK 17+ installed with JAVA_HOME configured appropriately. Tested with: Open JDK version "21"
+**Java JDK:** Required min version: JDK 17+ installed with JAVA_HOME configured appropriately. Tested with:
+* Open JDK version 21
+* Azul Zulu version 21
 
 **Maven**: Tested with Apache Maven 3.9.9
 
 **PostgreSql:**: Optional, can be started with docker-compose. Tested with PostgreSql 17+
 
-**docker**: Tested with Docker version 27.3.1
+**Docker**: Tested with Docker version 27.3.1
 
-**docker-compose**: Tested with Docker Compose version v2.30.3
+**Docker-Compose**: Tested with Docker Compose version v2.30.3
 
-# Database Configuration (Local Install)
-Install PostgreSql database server and PgAdmin, then create:
-```shell script
-database: sandbox
-user: testuser
-pass: testuser
-schema: quarkus
-```
-Test connection with (using any db client and the credentials):
-```shell script
-jdbc:postgresql://localhost:5432/sandbox
-```
-# Database Configuration (Alternative Docker-Compose)
+# Getting Started
+## Database
 From /quarkus-sandbox/scripts run:
 ```shell script
 docker-compose up -d
@@ -39,7 +30,7 @@ Postgres DB connection available on port 5434 so that it does not conflict with 
 jdbc:postgresql://localhost:5434/sandbox
 ```
 
-PgAdmin access: http://localhost:8034/browser/
+PgAdmin access from localhost: http://localhost:8034/browser/
 Create new server connection to (notice docker network host 'db' and port '5432' because PgAdmin runs within the docker network):
 ```shell script
 host: db

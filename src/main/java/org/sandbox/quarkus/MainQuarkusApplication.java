@@ -5,9 +5,9 @@ import io.quarkus.runtime.annotations.QuarkusMain;
 import org.jboss.logging.Logger;
 
 @QuarkusMain
-public class Main {
+public class MainQuarkusApplication {
 
-  private static final Logger LOGGER = Logger.getLogger("Main");
+  private static final Logger LOGGER = Logger.getLogger(MainQuarkusApplication.class.getSimpleName());
 
   public static void main(String... args) {
     LOGGER.info("#####: Main / Running main method from @QuarkusMain...");
